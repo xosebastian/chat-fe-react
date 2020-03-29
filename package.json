@@ -13,6 +13,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "express": "^4.17.1",
+    "mobile-device-detect": "^0.3.3",
     "normalize.css": "^8.0.1",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0",

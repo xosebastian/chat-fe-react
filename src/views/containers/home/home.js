@@ -4,6 +4,7 @@ import Aside from '../../components/aside';
 import Chat from '../../components/chat';
 import { Row, Container, Col } from 'react-grid';
 import useWindowDimensions from '../../hooks/windowsDimension';
+import { isMobile } from 'mobile-device-detect';
 
 
 
@@ -18,10 +19,12 @@ function Home() {
       </Header>
       <Container fluid>
         <Row >
-          <Col sm={2} style={{padding:'0', height: height}}>
-            <Aside />
-          </Col>
-          <Col sm={10} style={{height: height, padding:'0'}}>
+          {!isMobile &&        
+            <Col sm={12} md={2} style={{padding:'0', height: height}}>
+              <Aside />
+            </Col>
+          }
+          <Col sm={12} md={10} style={{height: height, padding:'0'}}>
             <Chat height={height} />
           </Col>
         </Row>

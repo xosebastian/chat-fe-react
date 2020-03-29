@@ -13,7 +13,7 @@ function Chat({height}) {
                 <RoomTitle sm={12} md={12}>
                    
                 </RoomTitle>
-                <Col  sm={12} md={12} style={{marginTop:'30px', height: height -'200', overflowY:'scroll', paddingBottom:'30px'}}>
+                <Col  sm={12} md={12} style={{marginTop:'30px', height: height -'200', overflowY:'scroll', paddingBottom:'20px'}}>
                     <div>[Sebastian]: Hola!</div>
                     <div>[Sebastian]: Prueba</div>
                     <div>[Sebastian]: Prueba</div>
@@ -105,7 +105,7 @@ function Chat({height}) {
                     <div>[Sebastian]: Prueba</div>
                     
                 </Col>
-                <Col  sm={12} md={12} >
+                <Col  sm={12} md={12} style={{padding:'10px 0'}}>
                     <Row>
                       
                         <Col xs={2} sm={1}>

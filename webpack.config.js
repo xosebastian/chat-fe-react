@@ -6,16 +6,10 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require("path");
 
 module.exports = {
-  watch: false,
+  watch: process.env.NODE_ENV === "production" ? false : true,
   mode: "development",
   devServer: {
-    port: 3000,
-    proxy: {
-      "/api": {
-        target: "http://localhost:8080",
-        pathRewrite: { "^/api": "" }
-      }
-    },
+    port: process.env.PORT ? process.env.PORT : 3000,
     host: "localhost",
     historyApiFallback: true,
     hot: true,

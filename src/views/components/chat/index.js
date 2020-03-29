@@ -1,9 +1,9 @@
 import React from 'react';
-import  Container  from './styled';
+import  {  Container, Button }  from './styled';
 import {  Row, Col } from 'react-grid';
 import Input from '../Input';
 import  RoomTitle  from './components/room/title';
-
+import { IoMdSend, IoIosLink  } from "react-icons/io";
 
 function Chat({height}) {
 
@@ -107,14 +107,21 @@ function Chat({height}) {
                 </Col>
                 <Col  sm={12} md={12} >
                     <Row>
-                        <Col sm={1}>
-                            
+                      
+                        <Col xs={2} sm={1}>
+                        <Button>
+                                <IoIosLink />
+                            </Button> 
                         </Col>
-                        <Col sm={10} style={{background:'#242526'}}>
+                        
+                        
+                        <Col  xs={8} sm={10} style={{background:'#242526'}}>
                             <Input />
                         </Col>
-                        <Col sm={1}>
-                            Enviar
+                        <Col xs={2} sm={1}>
+                            <Button>
+                                <IoMdSend />
+                            </Button> 
                         </Col>
                     </Row>
               

@@ -1,7 +1,4 @@
 import  styled from 'styled-components';
-import { mediaBreakpointUp } from 'react-grid';
-
-
 
 export const Aside = styled.div`
     background: #242526;

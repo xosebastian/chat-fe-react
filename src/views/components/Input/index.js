@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import  _Input from './styled';
-import KeyboardEventHandler from 'react-keyboard-event-handler';
 
-
-function Input(props) {
+function Input() {
 
     const [value, setValue] = useState('');
 

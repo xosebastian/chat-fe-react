@@ -11,9 +11,9 @@ function Chat({height}) {
     <Container fluid>
         <Row>
                 <RoomTitle sm={12} md={12}>
-                   General
+                   
                 </RoomTitle>
-                <Col  sm={12} md={12} style={{marginTop:'10px', height: height -'190', overflowY:'scroll', paddingBottom:'20px'}}>
+                <Col  sm={12} md={12} style={{marginTop:'30px', height: height -'200', overflowY:'scroll', paddingBottom:'30px'}}>
                     <div>[Sebastian]: Hola!</div>
                     <div>[Sebastian]: Prueba</div>
                     <div>[Sebastian]: Prueba</div>

@@ -6,7 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require("path");
 
 module.exports = {
-  watch: true,
+  watch: false,
   mode: "development",
   devServer: {
     port: 3000,

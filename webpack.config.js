@@ -13,7 +13,7 @@ module.exports = {
     host: "localhost",
     historyApiFallback: true,
     hot: true,
-    contentBase: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__dirname, "build"),
     compress: true,
     inline: true,
     index: "index.html"
@@ -80,7 +80,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bbva.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "build")
   },
   resolve: {
     extensions: [".js", ".jsx"]

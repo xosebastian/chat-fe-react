@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
+    "start": "node server.js",
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },

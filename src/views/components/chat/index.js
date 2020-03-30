@@ -109,9 +109,12 @@ function Chat({height}) {
                     <Row>
                       
                         <Col xs={2} sm={1}>
-                        <Button>
+                       {/* 
+                       
+                       <Button>
                                 <IoIosLink />
                             </Button> 
+                       */} 
                         </Col>
                         
                         

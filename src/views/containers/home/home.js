@@ -4,9 +4,6 @@ import Aside from '../../components/aside';
 import Chat from '../../components/chat';
 import { Row, Container, Col } from 'react-grid';
 import useWindowDimensions from '../../hooks/windowsDimension';
-import { isMobile } from 'mobile-device-detect';
-import { connectSocket, socket } from '../../../core/socket.config';
-
 
 
 
@@ -14,7 +11,7 @@ function Home() {
   const { height, width } = useWindowDimensions();
 
 
-
+/*
   const sendMenssage =() => {
     alert();
     console.log();
@@ -23,7 +20,7 @@ function Home() {
   
   }
 
-
+*/
 
   
   return (

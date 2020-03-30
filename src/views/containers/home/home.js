@@ -31,11 +31,11 @@ function Home() {
       <Container fluid onClick={() => sendMenssage()}>
         <Row >
     
-            <Col xs={2}  sm={2} md={2} style={{padding:'0', height: height}}>
+            <Col xs={1}  sm={1} md={1} style={{padding:'0', height: height}}>
               <Aside />
             </Col>
          
-          <Col xs={10} sm={10} md={10} style={{height: height, padding:'0'}}>
+          <Col xs={11} sm={11} md={11} style={{height: height, padding:'0'}}>
             <Chat height={height} />
           </Col>
         </Row>

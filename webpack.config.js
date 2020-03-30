@@ -24,6 +24,9 @@ module.exports = {
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
+        compress: { 
+          drop_console:true
+        },
         test: /\.js(\?.*)?$/i
       })
     ]

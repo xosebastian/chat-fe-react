@@ -105,7 +105,7 @@ function Chat({height}) {
                     <div>[Sebastian]: Prueba</div>
                     
                 </Col>
-                <Col  sm={12} md={12} style={{padding:'10px 0'}}>
+                <Col  sm={12} md={12} style={{padding: '10px 0'}}>
                     <Row>
                       
                         <Col xs={2} sm={1}>

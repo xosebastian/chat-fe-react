@@ -1,7 +1,8 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+//const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
 
 const path = require("path");
 
@@ -10,7 +11,7 @@ module.exports = {
   mode: "development",
   devServer: {
     port: process.env.PORT ? process.env.PORT : 3000,
-    host: "192.168.0.160",
+    host: "localhost",
     historyApiFallback: true,
     hot: true,
     contentBase: path.resolve(__dirname, "dist"),
@@ -22,12 +23,12 @@ module.exports = {
     hints: process.env.NODE_ENV === "production" ? "warning" : false
   },
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
+      new TerserPlugin({
         test: /\.js(\?.*)?$/i,
-        exclude: /node_modules/
-      })
-    ]
+      }),
+    ],
   },
   module: {
     rules: [

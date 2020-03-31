@@ -1,8 +1,6 @@
 import io from 'socket.io-client'; 
 
-
-
-const socketUrl = 'http://localhost:5000/';
+const socketUrl = 'https://chat-node-be.herokuapp.com/';
 
 export const socket = io(socketUrl);
 

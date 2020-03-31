@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import  _Input from './styled';
 
-function Input() {
+function Input( {onChange, handleSendMenssage, value}) {
 
-    const [value, setValue] = useState('');
+    //const [value, setValue] = useState('');
 
   return (
 
-    <_Input type="text" placeholder="Escribi un mensaje..." autoComplete="off" autoCorrect="off" autoCapitalize="off" maxLength='125' value={value} onKeyPress={e => { (event.key === 'Enter') &&  e.preventDefault();  }
-              } onChange={(e) => (setValue(e.target.value))} spellCheck="false" />
- 
+    <_Input type="text" 
+    value={value} 
+    placeholder="Escribi un mensaje..." 
+    autoComplete="off" 
+    autoCorrect="off" 
+    autoCapitalize="off" 
+    maxLength='125' 
+    onKeyPress={event => { (event.key === 'Enter') && handleSendMenssage() }} 
+    onChange={onChange} spellCheck="false" />
   );
 }
 

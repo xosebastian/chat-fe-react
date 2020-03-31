@@ -3,7 +3,8 @@ import { Container } from 'react-grid';
 
 
 
-export const Header = styled(Container)`
+
+export const Container_ = styled(Container)`
     background: #242526;
     border-bottom: solid 1px rgba(255, 255, 255, 0.1)
 `

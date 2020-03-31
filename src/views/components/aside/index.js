@@ -1,18 +1,19 @@
 import React from 'react';
-import { Row, Col } from 'react-grid';
+import { Row, Col, Container } from 'react-grid';
 import {Aside as Aside_} from './styled';
 
 
-function Aside({children}) {
+function Aside({children, height}) {
   return (
-
-  <Aside_>
-      <Row>
-          <Col>
-            Aside
-          </Col>
-      </Row>
-  </Aside_>
+    <Col xs={2}  sm={2} md={2} style={{padding:'0', height:height} }>
+        <Aside_>
+            <Row >
+                <Col >
+                  {children}
+                </Col>
+            </Row>
+        </Aside_>
+  </Col>
   );
 }
 

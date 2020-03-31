@@ -1,19 +1,31 @@
-import React from 'react';
-import  {  Container, Button }  from './styled';
+import React, {useEffect, useRef, useState} from 'react';
+import  {  Container }  from './styled';
 import {  Row, Col } from 'react-grid';
-import Input from '../Input';
-import  RoomTitle  from './components/room/title';
-import { IoMdSend, IoIosLink  } from "react-icons/io";
+
+import  RoomTitle  from './components/roomTitle';
+import  TextBox  from './components/textBox';
+
 
 function Chat({height}) {
 
+    const textBoxRef = useRef(null);
+    const roomTitleRef = useRef(null);
+
+    const [  textBoxHeight, setTextBoxHeigh] = useState(0)
+    const [  roomTitleHeight, setRoomTitleHeigh] = useState(0)
+
+    useEffect(() => {
+      setTextBoxHeigh(textBoxRef.current.clientHeight);
+      setRoomTitleHeigh(roomTitleRef.current.clientHeight);
+    }, []);
+  
+
+    console.log(roomTitleHeight);
   return (
-    <Container fluid>
+    <Container fluid style={{height: height }}>
         <Row>
-                <RoomTitle sm={12} md={12}>
-                   
-                </RoomTitle>
-                <Col  sm={12} md={12} style={{marginTop:'30px', height: height -'200', overflowY:'scroll', paddingBottom:'20px'}}>
+                <RoomTitle ref={roomTitleRef} sm={12} md={12}></RoomTitle> 
+                <Col  sm={12} md={12}  style={{overflowY:'scroll', paddingTop:'20px', height: height - (textBoxHeight + roomTitleHeight) }}>
                     <div>[Sebastian]: Hola!</div>
                     <div>[Sebastian]: Prueba</div>
                     <div>[Sebastian]: Prueba</div>
@@ -85,51 +97,12 @@ function Chat({height}) {
                     <div>[Sebastian]: Prueba</div>
                     <div>[Sebastian]: Prueba</div>
                     <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    <div>[Sebastian]: Prueba</div>
-                    
+                    <div>[Sebastian]: Prueba</div>    
                 </Col>
-                <Col  sm={12} md={12} style={{padding: '10px 0'}}>
-                    <Row>
-                      
-                        <Col xs={2} sm={1}>
-                       {/* 
-                       
-                       <Button>
-                                <IoIosLink />
-                            </Button> 
-                       */} 
-                        </Col>
-                        
-                        
-                        <Col  xs={8} sm={10} style={{background:'#242526'}}>
-                            <Input />
-                        </Col>
-                        <Col xs={2} sm={1}>
-                            <Button>
-                                <IoMdSend />
-                            </Button> 
-                        </Col>
-                    </Row>
-              
-                </Col>
+        
 
+            <TextBox ref={textBoxRef}></TextBox>
+               
         </Row>
   </Container>
   );

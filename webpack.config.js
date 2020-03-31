@@ -10,7 +10,7 @@ module.exports = {
   mode: "development",
   devServer: {
     port: process.env.PORT ? process.env.PORT : 3000,
-    host: "localhost",
+    host: "192.168.0.160",
     historyApiFallback: true,
     hot: true,
     contentBase: path.resolve(__dirname, "dist"),

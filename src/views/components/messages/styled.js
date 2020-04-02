@@ -9,7 +9,7 @@ export const ContainerMessage = styled.div`
 
 
 export const MessageBox = styled.div`
-    background:rgb(36, 37, 38);
+    background:#3a3b3c;
     display: inline-block;
     width:auto;
     padding:10px;

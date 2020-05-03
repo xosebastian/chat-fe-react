@@ -81,14 +81,14 @@ module.exports = {
     ]
   },
   output: {
-    filename: "[name].bbva.js",
+    filename: "[name].chat.js",
     path: path.resolve(__dirname, "dist")
   },
   resolve: {
     extensions: [".js", ".jsx"]
   },
   plugins: [
-    new ExtractTextPlugin("bbva.css"),
+    new ExtractTextPlugin("chat.css"),
     new MiniCssExtractPlugin({
       filename: "[name].bbva.css",
       chunkFilename: "[id].css",

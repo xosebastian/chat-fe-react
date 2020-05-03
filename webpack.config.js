@@ -90,7 +90,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("chat.css"),
     new MiniCssExtractPlugin({
-      filename: "[name].bbva.css",
+      filename: "[name].chat.css",
       chunkFilename: "[id].css",
       ignoreOrder: false
     }),

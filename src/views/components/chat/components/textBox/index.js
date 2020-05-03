@@ -10,6 +10,7 @@ const TextBox = React.forwardRef((props, ref) => {
     connectSocket();
     
    const [value, setValue] = useState('');
+   const [time, setTime] = useState('');
 
 
    const handleSendMenssage =() => {    

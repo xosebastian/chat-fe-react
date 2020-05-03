@@ -18,8 +18,19 @@ function Home() {
 
   useEffect(() => {
     let { clientHeight } = headerRef.current;
+    localStorage.setItem("username", Math.floor(Math.random() * (1000000 - 0) + 0));
     setHeaderHeight(clientHeight);
   }, []);
+
+
+
+
+
+
+
+
+
+
 
 
 

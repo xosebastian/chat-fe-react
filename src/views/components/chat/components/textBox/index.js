@@ -14,7 +14,7 @@ const TextBox = React.forwardRef((props, ref) => {
 
    const handleSendMenssage =() => {    
 
-        value && (
+        (value && value.length < 126) && (
             socket.emit('sendMessage', {
                 user: 'anonimus',
                 message: value,

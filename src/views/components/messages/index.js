@@ -14,7 +14,7 @@ function Message(props) {
       <MessageBox username={user}>
  
         {username}
-        :
+        {': '}
         {message}
       </MessageBox> 
     </ContainerMessage>

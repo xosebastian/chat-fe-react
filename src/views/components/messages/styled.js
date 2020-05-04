@@ -15,6 +15,13 @@ export const MessageBox = styled.div`
     padding:10px;
 `
 
+export const MessageUsername = styled.div`
+    background:transparent;
+    display: inline-block;
+    width:auto;
+    padding:10px;
+`
+
 
 
 

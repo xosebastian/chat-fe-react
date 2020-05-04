@@ -1,5 +1,6 @@
 import React from 'react';
-import {ContainerMessage, MessageBox} from './styled';
+import {ContainerMessage, MessageBox, MessageUsername} from './styled';
+
 
 
 function Message(props) {
@@ -11,6 +12,9 @@ function Message(props) {
 
 
     <ContainerMessage>
+      <MessageUsername>
+        username
+      </MessageUsername>
       <MessageBox username={user}>
         {message}
       </MessageBox> 

@@ -16,7 +16,8 @@ export const MessageBox = styled.div`
 `
 
 export const MessageUsername = styled.div`
-    background:transparent;
+    background:${`#${   Math.random().toString(16).substr(-6)}`};
+    margin-right:5px;
     display: inline-block;
     width:auto;
     padding:10px;

@@ -13,7 +13,7 @@ function Message(props) {
 
     <ContainerMessage>
       <MessageUsername>
-        username:
+        ANON
       </MessageUsername>
       <MessageBox username={user}>
         {message}

@@ -15,6 +15,8 @@ function Home() {
   const [  headerHeight, setHeaderHeight ] = useState(0)
 
   const { height, width } = useWindowDimensions();
+  const color =`#${Math.random().toString(16).substr(-6)}`;
+  
 
   useEffect(() => {
     let { clientHeight } = headerRef.current;
@@ -52,7 +54,7 @@ function Home() {
             }
 
           <Col xs={12} sm={12} md={10} style={{padding:0}}>
-            <Chat height={height-headerHeight} />
+            <Chat height={height-headerHeight} color={color} />
           </Col>
         </Row>
       </Container>

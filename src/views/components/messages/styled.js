@@ -20,7 +20,7 @@ export const MessageUsername = styled.div`
     margin-right:5px;
     display: inline-block;
     width:auto;
-    padding:10px;
+    padding:5px 10px;
 `
 
 

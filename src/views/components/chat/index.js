@@ -8,7 +8,7 @@ import MessageList from '../messagesList';
 import  RoomTitle  from './components/roomTitle';
 import  TextBox  from './components/textBox';
 
-function Chat({height}) {
+function Chat({height, color}) {
     
     let messages = getMessage();
     const textBoxRef = useRef(null);
@@ -42,7 +42,7 @@ function Chat({height}) {
 
 
 
-            <TextBox ref={textBoxRef}></TextBox>
+            <TextBox ref={textBoxRef} color={color}></TextBox>
                
         </Row>
   </Container>

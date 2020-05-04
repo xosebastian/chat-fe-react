@@ -10,7 +10,7 @@ const TextBox = React.forwardRef((props, ref) => {
     connectSocket();
     
    const [value, setValue] = useState('');
-   const color =`#${Math.random().toString(16).substr(-6)}`;
+
 
 
    const handleSendMenssage =() => {    
@@ -19,7 +19,7 @@ const TextBox = React.forwardRef((props, ref) => {
         (value && value.length < 126) && (
             socket.emit('sendMessage', {
                 user: 'anonimus',
-                color,
+                color: props.color,
                 message: value,
             },
             setValue('')

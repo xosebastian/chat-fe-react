@@ -16,9 +16,9 @@ export const MessageBox = styled.div`
 `
 
 export const MessageUsername = styled.div`
-    background: ${ ({ color }) => `${ color }` };
-    margin-right:5px;
-    font-size:15px;
+    color: ${ ({ color }) => `${ color }` };
+   /*  margin-right:0px;
+    font-size:15px; */
     display: inline-block;
     width:auto;
     padding:5px 10px;

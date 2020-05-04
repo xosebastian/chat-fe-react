@@ -5,15 +5,16 @@ import {ContainerMessage, MessageBox, MessageUsername} from './styled';
 
 function Message(props) {
 
-    const {message, color} = props;
-    //const username = localStorage.getItem('username');
+    const {message, color, username} = props;
+    // const username = localStorage.getItem('username');
  
   return (
 
 
     <ContainerMessage>
       <MessageUsername color={color}>
-        ANON
+        {username}
+        :
       </MessageUsername>
       <MessageBox>
         {message}

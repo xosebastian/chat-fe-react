@@ -16,11 +16,11 @@ function Home() {
 
   const { height, width } = useWindowDimensions();
   const color =`#${Math.random().toString(16).substr(-6)}`;
+  const username = Math.floor(Math.random() * (99999999999 - 0) + 0);
   
 
   useEffect(() => {
     let { clientHeight } = headerRef.current;
-    localStorage.setItem("username", Math.floor(Math.random() * (99999999999 - 0) + 0));
     setHeaderHeight(clientHeight);
   }, []);
 
@@ -54,7 +54,7 @@ function Home() {
             }
 
           <Col xs={12} sm={12} md={10} style={{padding:0}}>
-            <Chat height={height-headerHeight} color={color} />
+            <Chat height={height-headerHeight} color={color} username={username} />
           </Col>
         </Row>
       </Container>

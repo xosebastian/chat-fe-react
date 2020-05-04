@@ -21,6 +21,7 @@ const TextBox = React.forwardRef((props, ref) => {
                 user: 'anonimus',
                 color: props.color,
                 message: value,
+                username: props.username,
             },
             setValue('')
             )

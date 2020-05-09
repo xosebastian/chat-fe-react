@@ -31,7 +31,7 @@ export const MessageText= styled.div`
 
 
 export const MessageDate= styled.div`
-    font-size:15px; 
+    font-size:10px; 
     width:auto;
     float:right;
 `

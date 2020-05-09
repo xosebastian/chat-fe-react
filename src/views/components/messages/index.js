@@ -1,5 +1,5 @@
 import React from 'react';
-import {ContainerMessage, MessageBox, MessageUsername} from './styled';
+import {ContainerMessage, MessageBox,MessageText,MessageDate, MessageUsername} from './styled';
 
 
 
@@ -12,12 +12,16 @@ function Message(props) {
 
 
     <ContainerMessage>
-      <MessageUsername color={color}>
-        {username}
-        :
-      </MessageUsername>
       <MessageBox>
-        {message}
+        <MessageUsername color={color}>
+          {username}
+        </MessageUsername>
+        <MessageText>
+          {message}
+        </MessageText>
+        <MessageDate>
+          02:19
+        </MessageDate>
       </MessageBox> 
     </ContainerMessage>
 

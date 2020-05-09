@@ -17,11 +17,21 @@ export const MessageBox = styled.div`
 
 export const MessageUsername = styled.div`
     color: ${ ({ color }) => `${ color }` };
-   /*  margin-right:0px;
-    font-size:15px; */
+    font-size:15px; 
+    display: block;
+    width:auto;
+`
+
+
+export const MessageText= styled.div`
     display: inline-block;
     width:auto;
-    padding:5px 10px;
+`
+
+
+export const MessageDate= styled.div`
+    width:auto;
+    float:right;
 `
 
 

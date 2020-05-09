@@ -25,6 +25,7 @@ export const MessageUsername = styled.div`
 
 export const MessageText= styled.div`
     display: inline-block;
+    display: block;
     width:auto;
 `
 
